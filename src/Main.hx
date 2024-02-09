@@ -9,13 +9,13 @@ import haxegon.*;
 class Main 
 
 {
-	public static final WINDOW_WIDTH = Gfx.screenwidth;
-	public static final WINDOW_HEIGHT = Gfx.screenheight;
+	public final WINDOW_WIDTH = Gfx.screenwidth;
+	public final WINDOW_HEIGHT = Gfx.screenheight;
 	
 	
 	public function new() 
 	{
-	
+		
 	}
 	
 	private function init() {

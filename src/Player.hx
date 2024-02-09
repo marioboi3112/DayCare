@@ -7,15 +7,14 @@ package;
 
 import haxegon.*;
 
-class Player
+class Player extends Main
 {
 
 	public function new() {
+		super();
 		update();
 	}
 	
-	var WINDOW_WIDTH = Gfx.screenwidth;
-	var WINDOW_HEIGHT = Gfx.screenheight;
 	private static var player = {
 		x : 120,
 		y : 120,
@@ -42,11 +41,11 @@ class Player
 		trace(Gfx.screenwidth);
 		//player collision that checks when the player goes off screen
 		
-		if (player.x >= Gfx.screenwidth - player.width) {
-			player.x = Gfx.screenwidth - player.width;
+		if (player.x >= WINDOW_WIDTH - player.width) {
+			player.x = WINDOW_WIDTH - player.width;
 		}
-		if (player.y >= Gfx.screenheight - player.height) {
-			player.y = Gfx.screenheight - player.height;
+		if (player.y >= WINDOW_HEIGHT - player.height) {
+			player.y = WINDOW_HEIGHT - player.height;
 		}
 		if (player.x <= 0) {
 			player.x = 0;
@@ -57,11 +56,15 @@ class Player
 		
 	}
 	
-	private function init() {
+	private function loadPlayerSprite() {
+		var spr = Gfx.loadimage();
+	}
+	
+	override private function init() {
 	
 	}
 	
-	private function update() {
+	override private function update() {
 		Gfx.resizescreen(0, 0);
 		Gfx.fillbox(player.x, player.y, player.width, player.height, player.col);
 		PlayerMovementLogic();
