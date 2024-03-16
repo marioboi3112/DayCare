@@ -19,11 +19,13 @@ class Main
 	}
 	
 	private function init() {
+
 	}
 	
 	private function update() {
 		//instances
-		var player:Player = new Player();	
+		Scene.change(PreGame);
+		
 	}
 	
 }

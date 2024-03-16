@@ -56,12 +56,8 @@ class Player extends Main
 		
 	}
 	
-	private function loadPlayerSprite() {
-		var spr = Gfx.loadimage();
-	}
 	
 	override private function init() {
-	
 	}
 	
 	override private function update() {
